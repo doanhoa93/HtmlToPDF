@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @author jillukowicz
@@ -15,6 +16,12 @@ public class WkhtmlController {
 
   @Autowired
   private WkhtmlPdfCreator pdfCreator;
+
+  @RequestMapping(value = "/", method = RequestMethod.GET)
+  public void home(HttpServletResponse response) throws IOException {
+    response.getWriter().print("Hi!");
+  }
+
 
   @RequestMapping(value = "/api/pdf", method = RequestMethod.GET)
   public void pdf(HttpServletResponse response) {
