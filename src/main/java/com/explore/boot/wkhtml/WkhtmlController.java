@@ -18,7 +18,9 @@ public class WkhtmlController {
   private WkhtmlPdfCreator pdfCreator;
 
   @RequestMapping(value = "/api/pdf", method = RequestMethod.GET)
-  public void pdf(@RequestBody WkhtmlRequest request, HttpServletResponse response){
+  public void pdf(/*@RequestBody WkhtmlRequest request, */HttpServletResponse response){
+    WkhtmlRequest request = new WkhtmlRequest();
+    request.setIn("http://www.acslworld.com");
     pdfCreator.create(request, response);
   }
 }

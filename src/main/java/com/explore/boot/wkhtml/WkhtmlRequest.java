@@ -23,4 +23,12 @@ public class WkhtmlRequest {
   public void setOut(String out) {
     this.out = out;
   }
+
+  @Override
+  public String toString() {
+    return "WkhtmlRequest{" +
+        "in='" + in + '\'' +
+        ", out='" + out + '\'' +
+        '}';
+  }
 }
