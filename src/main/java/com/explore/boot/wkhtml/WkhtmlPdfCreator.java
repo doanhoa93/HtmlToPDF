@@ -28,14 +28,6 @@ public class WkhtmlPdfCreator {
     List<String> pdfCommand = Arrays.asList(
         "/app/bin/wkhtmltopdf",
         request.getIn(),
-        "--margin-left",
-        "0mm",
-        "--margin-right",
-        "0mm",
-        "--margin-bottom",
-        "0mm",
-        "--margin-top",
-        "0mm",
         "-"
     );
 
