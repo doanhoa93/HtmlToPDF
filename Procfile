@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/wkhtml-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar target/HtmlToPDF-v1.jar
