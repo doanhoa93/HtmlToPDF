@@ -27,7 +27,7 @@ public class WkhtmlController {
   public void pdf(HttpServletResponse response) {
     /*@RequestBody WkhtmlRequest request, */
     WkhtmlRequest request = new WkhtmlRequest();
-    request.setIn("https://ga.acslworld.com/unacc/Index.jsp");
+    request.setIn("https://code-complete.herokuapp.com/cv-preview");
     pdfCreator.create(request, response);
   }
 }
