@@ -26,8 +26,16 @@ public class WkhtmlPdfCreator {
 
   public void create(WkhtmlRequest request, HttpServletResponse response) {
     List<String> pdfCommand = Arrays.asList(
-        "/app/bin/wkhtmltopdf -T 0 -B 0 -L 0 -R 0 ",
+        "/app/bin/wkhtmltopdf",
         request.getIn(),
+        "--margin-left",
+        "0mm",
+        "--margin-right",
+        "0mm",
+        "--margin-bottom",
+        "0mm",
+        "--margin-top",
+        "0mm",
         "-"
     );
 
